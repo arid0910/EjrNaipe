@@ -9,6 +9,8 @@ package daw;
  * @author adam
  */
 public class Naipes {
-
+    
+    private int numCartas;
+    private String palo; 
    
 }
