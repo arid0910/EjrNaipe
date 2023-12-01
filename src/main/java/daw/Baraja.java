@@ -9,5 +9,16 @@ package daw;
  * @author adam
  */
 public class Baraja {
-    
+
+    public static String cartaAleatoria(Naipes n) {
+        
+        int numCarta = n.getNumCartas();
+        String palo = n.getPalo();
+        String resu = """
+                      Tu carta es:
+                       - Nº carta ->%s
+                       - Palo ->%s
+                      """.formatted(numCarta,palo);
+        return resu;
+    }
 }
