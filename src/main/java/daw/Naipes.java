@@ -25,6 +25,22 @@ public class Naipes {
         this.palo = arrayPalo[random.nextInt(4)];
     }
 
+    public Naipes(int numCartas, String palo) {
+        this.numCartas = numCartas;
+        if (numCartas < 1 || numCartas > 10){
+            throw new IllegalArgumentException("Introduce un numero entre 1 y 10");
+        }
+        this.palo = palo;
+        if (palo.equalsIgnoreCase("oros")||
+            palo.equalsIgnoreCase("espadas")||
+            palo.equalsIgnoreCase("copas")||
+            palo.equalsIgnoreCase("bastos")) {
+        
+        }else{
+             throw new IllegalArgumentException("Introduce -> Oros, Espadas , Copas o Basatos");
+        }
+    }
+
     public int getNumCartas() {
         return numCartas;
     }
